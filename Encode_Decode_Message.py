@@ -1,3 +1,7 @@
+"""Message Encode-Decode Python Project!
+Author:Abdullah Fahim"""
+
+
 from tkinter import *
 import base64
 
