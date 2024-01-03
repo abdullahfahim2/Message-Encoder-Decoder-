@@ -1,10 +1,11 @@
 """Message Encode-Decode Python Project!
 Author:Abdullah Fahim"""
 
-
+#import secton
 from tkinter import *
 import base64
 
+#Define root directory
 root = Tk()
 
 root.geometry('500x300')
