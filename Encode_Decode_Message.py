@@ -8,10 +8,10 @@ import base64
 #Define root directory
 root = Tk()
 
+
 root.geometry('500x300')
 root.resizable(0,0)
 root.title("Message Encode and Decode Project By Abdullah Fahim")
-
 
 Label(root, text ='ENCODE DECODE', font = 'arial 20 bold').pack()
 
@@ -21,7 +21,6 @@ mode = StringVar()
 Result = StringVar()
 
 #Encoding Function
-
 def Encode(key,message):
     enc=[]
 
@@ -31,7 +30,6 @@ def Encode(key,message):
     return base64.urlsafe_b64encode("".join(enc).encode()).decode()
 
 #Decode Function
-
 def Decode(key,message):
     dec=[]
     message = base64.urlsafe_b64decode(message).decode()
@@ -43,7 +41,6 @@ def Decode(key,message):
 
 
 #Mode Setup Function
-
 def Mode():
     if(mode.get() == 'e'):
         Result.set(Encode(private_key.get(), Text.get()))
@@ -54,13 +51,11 @@ def Mode():
 
 
 #Exit Window Function
-        
 def Exit():
     root.destroy()
 
 
 #Function to reset Window
-    
 def Reset():
     Text.set("")
     private_key.set("")
@@ -69,8 +64,6 @@ def Reset():
 
 
 #main window
-
-
 Label(root, font= 'arial 12 bold', text='MESSAGE').place(x= 60,y=60)
 Entry(root, font = 'arial 10', textvariable = Text, bg = 'ghost white').place(x=290, y = 60)
 
@@ -88,4 +81,3 @@ Button(root, font = 'arial 10 bold' ,text ='RESET' ,width =6, command = Reset,bg
 Button(root, font = 'arial 10 bold',text= 'EXIT' , width = 6, command = Exit,bg = 'Red', padx=2, pady=2).place(x=180, y = 190)
 
 root.mainloop()
-
