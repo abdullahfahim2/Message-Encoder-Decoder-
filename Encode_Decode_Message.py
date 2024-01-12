@@ -8,10 +8,10 @@ import base64
 #Define root directory
 root = Tk()
 
-
+#define tkinter window
 root.geometry('500x300')
-root.resizable(0,0)
-root.title("Message Encode and Decode Project By Abdullah Fahim")
+root.resizable(0,0)  #set tkinter window not resizeable
+root.title("Message Encode and Decode Project By Abdullah Fahim")  #set tkinter window tittle
 
 Label(root, text ='ENCODE DECODE', font = 'arial 20 bold').pack()
 
